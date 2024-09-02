@@ -21,13 +21,10 @@ export default function Component() {
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <video
-          className="absolute w-full h-full object-cover opacity-50"
-          autoPlay
-          muted
-          loop
-          playsInline
-          src="/placeholder.svg?height=1080&width=1920"
+        <img
+          className="absolute w-full h-full object-cover opacity-90"
+          src="/hero-2.png"
+          alt="Hero Image"
         />
         <div className="relative z-10 text-center">
           <h1 className="text-6xl md:text-8xl font-extrabold mb-4 text-white">
@@ -36,18 +33,30 @@ export default function Component() {
           <p className="text-xl md:text-2xl mb-8 text-white">
             Raw Lyricism | Unique Flow | Genre Versatility
           </p>
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-red-500 to-yellow-500 hover:from-red-600 hover:to-yellow-600 text-white"
-            onClick={() => setIsPlaying(!isPlaying)}
-          >
-            {isPlaying ? (
-              <Pause className="mr-2" />
-            ) : (
-              <PlayCircle className="mr-2" />
-            )}
-            {isPlaying ? "Pause" : "Play"} Latest Track
-          </Button>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-red-500 to-yellow-500 hover:from-red-600 hover:to-yellow-600 text-white"
+              onClick={() => setIsPlaying(!isPlaying)}
+            >
+              {isPlaying ? (
+                <Pause className="mr-2" />
+              ) : (
+                <PlayCircle className="mr-2" />
+              )}
+              {isPlaying ? "Pause" : "Play"} Latest Track
+            </Button>
+            <Button
+              size="lg"
+              className="bg-white text-black hover:bg-gray-200"
+              onClick={() =>
+                (window.location.href =
+                  "https://www.eventbrite.com/e/309fest-2024-tickets-997669856397?aff=pharoahthekid")
+              }
+            >
+              Tickets
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -88,9 +97,9 @@ export default function Component() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <img
-              src="/placeholder.svg?height=400&width=300"
-              alt="Pharaoh The Kid"
-              className="rounded-lg shadow-2xl w-full md:w-1/3 mb-8 md:mb-0"
+              className="w-[450px] h-[450px] object-cover opacity-100"
+              src="/bio-1.png"
+              alt="Hero Image"
             />
             <div className="md:w-2/3">
               <h2 className="text-4xl font-bold mb-4 text-white">
@@ -121,12 +130,17 @@ export default function Component() {
       </section>
 
       {/* Venues Section */}
-      <section className="py-16 bg-gradient-to-b from-gray-900 to-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-8 text-center text-white">
+      <section className="py-16 bg-gradient-to-b from-gray-900 to-black relative">
+        <div className="container mx-auto">
+          <img
+            className="absolute inset-0 w-full h-full object-cover opacity-30"
+            src="/album-1.png"
+            alt="Hero Image"
+          />
+          <h2 className="text-4xl font-bold mb-8 text-center text-white relative z-10">
             Where I've Rocked The Stage
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
             {[
               "Cheers On Main - Aledo, IL",
               "The Patio Bar & Grill - Galesburg, IL",
@@ -176,12 +190,13 @@ export default function Component() {
                   </Badge>
                 </p>
                 <p className="flex items-center justify-between text-white">
-                  <span>CDs</span>
+                  <span>Coozies</span>
                   <Badge variant="secondary" className="bg-gray-600">
                     $3.00
                   </Badge>
                 </p>
-                <Button className="w-full mt-4 bg-gradient-to-r from-yellow-400 to-red-500 hover:from-yellow-500 hover:to-red-600 text-white">
+                <Button className="w-full mt-4 bg-white text-black hover:bg-gray-200">
+                  {" "}
                   <ShoppingBag className="mr-2" />
                   Shop Merch
                 </Button>
