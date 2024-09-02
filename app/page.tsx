@@ -106,11 +106,11 @@ export default function Component() {
                 About Pharaoh The Kid
               </h2>
               <p className="text-lg mb-4 text-white">
-                Born in Burlington, IA, and raised in Oquawka/Galesburg, IL,
-                Pharaoh The Kid began his musical journey at just 5 years old.
-                Drawing inspiration from legends like Eminem, 50 Cent, and
-                Ludacris, he quickly developed his unique style characterized by
-                raw lyricism and versatile flow changes.
+                From Oquawka/Galesburg, IL, Pharaoh The Kid began his musical
+                journey at just 5 years old. Drawing inspiration from legends
+                like Eminem, 50 Cent, and Ludacris, he quickly developed his
+                unique style characterized by raw lyricism and versatile flow
+                changes.
               </p>
               <p className="text-lg mb-4 text-white">
                 His debut album, "Take a Trip Inside My Mind," spread rapidly
