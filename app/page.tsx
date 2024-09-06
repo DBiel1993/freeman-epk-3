@@ -88,7 +88,7 @@ export default function Component() {
                 borderRadius: "10px",
               }}
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-              src="https://embed.music.apple.com/us/album/playa-no-more/1735955984?i=1735955986"
+              src="https://embed.music.apple.com/us/album/name-callin/1687572195?i=1687572437"
             ></iframe>
             <iframe
               allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
@@ -101,7 +101,7 @@ export default function Component() {
                 borderRadius: "10px",
               }}
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-              src="https://embed.music.apple.com/us/album/name-callin/1687572195?i=1687572437"
+              src="https://embed.music.apple.com/us/album/mama/1735955984?i=1735956025"
             ></iframe>
             <iframe
               allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
