@@ -1,5 +1,3 @@
-// app/components/ui/HeroSection.tsx
-
 import React from "react";
 import { Button } from "@/components/ui/button"; // Update this import path as needed
 
@@ -20,7 +18,8 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl mb-8 text-white">
             Raw Lyricism | Unique Flow | Genre Versatility
           </p>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+          {/* Flex Column for Button and Music Embed */}
+          <div className="flex flex-col items-center justify-center gap-4">
             <Button
               size="lg"
               className="bg-white text-black hover:bg-gray-200"
@@ -31,10 +30,7 @@ const HeroSection = () => {
             >
               Tickets
             </Button>
-            <br />
-            <br />
-            <br />
-            <br />
+
             <iframe
               allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
               frameBorder="0"
@@ -51,6 +47,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
+
       <h2 className="text-4xl font-bold mt-10 ml-20">Upcoming Events</h2>
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <img
