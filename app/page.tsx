@@ -1,5 +1,6 @@
 "use client";
 
+import HeaderSection from "@/components/ui/HeaderSection";
 import FooterSection from "@/components/ui/FooterSection";
 import ContactMerchSection from "@/components/ui/ContactMerchSection";
 import VenuesSection from "@/components/ui/VenuesSection";
@@ -25,6 +26,7 @@ export default function Component() {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <HeaderSection />
       <HeroSection />
       <TopSongsSection />
       <BioSection />
