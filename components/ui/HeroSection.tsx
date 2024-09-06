@@ -51,7 +51,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      <h2 className="text-4xl font-bold mt-10 ml-12">Upcoming Events</h2>
+      <h2 className="text-4xl font-bold mt-10 ml-20">Upcoming Events</h2>
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <img
           className="absolute w-7/8 h-auto object-cover opacity-90"
