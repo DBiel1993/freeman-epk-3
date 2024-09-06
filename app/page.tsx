@@ -36,18 +36,6 @@ export default function Component() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-red-500 to-yellow-500 hover:from-red-600 hover:to-yellow-600 text-white"
-              onClick={() => setIsPlaying(!isPlaying)}
-            >
-              {isPlaying ? (
-                <Pause className="mr-2" />
-              ) : (
-                <PlayCircle className="mr-2" />
-              )}
-              {isPlaying ? "Pause" : "Play"} Latest Track
-            </Button>
-            <Button
-              size="lg"
               className="bg-white text-black hover:bg-gray-200"
               onClick={() =>
                 (window.location.href =
@@ -56,6 +44,21 @@ export default function Component() {
             >
               Tickets
             </Button>
+            <br></br>
+            <br></br> <br></br> <br></br>
+            <iframe
+              allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+              frameBorder="0"
+              height="175"
+              style={{
+                width: "100%",
+                maxWidth: "660px",
+                overflow: "hidden",
+                borderRadius: "10px",
+              }}
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+              src="https://embed.music.apple.com/us/album/welcome-to-the-party/1763052506?i=1763052507"
+            ></iframe>
           </div>
         </div>
       </section>
@@ -74,27 +77,45 @@ export default function Component() {
             Top Performing Tracks
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {["Name Callin", "Playa No More", "Cognac"].map((song, index) => (
-              <Card
-                key={song}
-                className="bg-gray-800 hover:bg-gray-700 transition-colors"
-              >
-                <CardContent className="p-6 flex items-center justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 text-white">
-                      {song}
-                    </h3>
-                    <Badge
-                      variant="secondary"
-                      className="text-white bg-gray-600"
-                    >{`#${index + 1} Hit`}</Badge>
-                  </div>
-                  <Button size="icon" variant="ghost" className="text-white">
-                    <Volume2 />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+            <iframe
+              allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+              frameBorder="0"
+              height="175"
+              style={{
+                width: "100%",
+                maxWidth: "660px",
+                overflow: "hidden",
+                borderRadius: "10px",
+              }}
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+              src="https://embed.music.apple.com/us/album/playa-no-more/1735955984?i=1735955986"
+            ></iframe>
+            <iframe
+              allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+              frameBorder="0"
+              height="175"
+              style={{
+                width: "100%",
+                maxWidth: "660px",
+                overflow: "hidden",
+                borderRadius: "10px",
+              }}
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+              src="https://embed.music.apple.com/us/album/name-callin/1687572195?i=1687572437"
+            ></iframe>
+            <iframe
+              allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+              frameBorder="0"
+              height="175"
+              style={{
+                width: "100%",
+                maxWidth: "660px",
+                overflow: "hidden",
+                borderRadius: "10px",
+              }}
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+              src="https://embed.music.apple.com/us/album/playa-no-more/1735955984?i=1735955986"
+            ></iframe>
           </div>
         </div>
       </section>
