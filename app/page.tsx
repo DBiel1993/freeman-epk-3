@@ -59,7 +59,14 @@ export default function Component() {
           </div>
         </div>
       </section>
-
+      <h2 className="text-4xl font-bold mt-10 ml-12">Upcoming Events</h2>{" "}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <img
+          className="absolute w-7/8 h-auto object-cover opacity-90"
+          src="/309Fest.jpg"
+          alt="Hero Image"
+        />
+      </section>
       {/* Top Songs Section */}
       <section className="py-16 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
@@ -91,7 +98,6 @@ export default function Component() {
           </div>
         </div>
       </section>
-
       {/* Bio Section */}
       <section className="py-16 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
@@ -128,7 +134,6 @@ export default function Component() {
           </div>
         </div>
       </section>
-
       {/* Venues Section */}
       <section className="py-16 bg-gradient-to-b from-gray-900 to-black relative">
         <div className="container mx-auto">
@@ -146,7 +151,6 @@ export default function Component() {
               "The Patio Bar & Grill - Galesburg, IL",
               "Luckys BarBQ - Oquawka, IL",
               "Opies Bar & Grill - Galesburg, IL",
-              "Lucky's BBQ - Oquawka, IL",
               "Smokin Willies BBQ - Galesburg, IL",
             ].map((venue) => (
               <Card
@@ -162,7 +166,6 @@ export default function Component() {
           </div>
         </div>
       </section>
-
       {/* Contact & Merch Section */}
       <section className="py-16 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
@@ -205,7 +208,6 @@ export default function Component() {
           </div>
         </div>
       </section>
-
       <footer className="bg-black py-8 text-center">
         <p className="text-white">
           &copy; 2024 Pharaoh The Kid. All rights reserved.
