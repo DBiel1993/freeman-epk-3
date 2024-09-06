@@ -1,5 +1,6 @@
 // app/components/ui/ContactMerchSection.tsx
 
+import Link from "next/link";
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -39,9 +40,11 @@ const ContactMerchSection = () => {
                   $3.00
                 </Badge>
               </p>
-              <Button className="w-full mt-4 bg-white text-black hover:bg-gray-200">
-                <ShoppingBag className="mr-2" /> Shop Merch
-              </Button>
+              <Link href="/pages/merch">
+                <Button className="w-full mt-4 bg-white text-black hover:bg-gray-200">
+                  <ShoppingBag className="mr-2" /> Shop Merch
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
