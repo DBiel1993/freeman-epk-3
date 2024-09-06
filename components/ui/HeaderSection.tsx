@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"; // Adjust the path as needed
 
 const HeaderSection = () => {
   return (
-    <header className="bg-black py-4">
+    <header className="bg-black py-4 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center px-4">
         {/* Logo or Title */}
         <div>
@@ -32,7 +32,7 @@ const HeaderSection = () => {
             <Button variant="ghost" className="text-white">
               Merch
             </Button>
-          </Link>{" "}
+          </Link>
         </nav>
       </div>
     </header>
