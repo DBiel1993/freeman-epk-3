@@ -1,5 +1,5 @@
-// app/components/ui/HeaderSection.tsx
-
+"use client";
+import Link from "next/link";
 import React from "react";
 import { Button } from "@/components/ui/button"; // Adjust the path as needed
 
@@ -13,18 +13,26 @@ const HeaderSection = () => {
         </div>
         {/* Navigation */}
         <nav className="flex space-x-4">
-          <Button variant="ghost" className="text-white">
-            Home
-          </Button>
-          <Button variant="ghost" className="text-white">
-            About
-          </Button>
-          <Button variant="ghost" className="text-white">
-            Contact
-          </Button>
-          <Button variant="ghost" className="text-white">
-            Merch
-          </Button>
+          <Link href="/">
+            <Button variant="ghost" className="text-white">
+              Home
+            </Button>
+          </Link>
+          <Link href="/pages/about">
+            <Button variant="ghost" className="text-white">
+              About
+            </Button>
+          </Link>
+          <Link href="/pages/contact">
+            <Button variant="ghost" className="text-white">
+              Contact
+            </Button>
+          </Link>
+          <Link href="/pages/merch">
+            <Button variant="ghost" className="text-white">
+              Merch
+            </Button>
+          </Link>{" "}
         </nav>
       </div>
     </header>
