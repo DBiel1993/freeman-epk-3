@@ -1,5 +1,6 @@
 "use client";
 
+import SpaceIntro from "@/components/ui/Spaceintro";
 import Epkeventlist from "@/components/ui/Epkeventlist";
 import Epkcalendar from "@/components/ui/Epkcalendar";
 import HeaderSection from "@/components/ui/HeaderSection";
@@ -33,7 +34,7 @@ export default function Component() {
       <Epkcalendar />
       <TopSongsSection />
       <BioSection />
-      <Epkeventlist />
+      <SpaceIntro />
       <ContactMerchSection />
       <FooterSection />
     </div>
