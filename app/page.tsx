@@ -1,5 +1,5 @@
 "use client";
-
+import Epkcalendar from "@/components/ui/Epkcalendar";
 import HeaderSection from "@/components/ui/HeaderSection";
 import FooterSection from "@/components/ui/FooterSection";
 import ContactMerchSection from "@/components/ui/ContactMerchSection";
@@ -28,6 +28,7 @@ export default function Component() {
     <div className="min-h-screen bg-black text-white">
       <HeaderSection />
       <HeroSection />
+      <Epkcalendar />
       <TopSongsSection />
       <BioSection />
       <VenuesSection />
