@@ -1,4 +1,6 @@
 "use client";
+
+import Epkeventlist from "@/components/ui/Epkeventlist";
 import Epkcalendar from "@/components/ui/Epkcalendar";
 import HeaderSection from "@/components/ui/HeaderSection";
 import FooterSection from "@/components/ui/FooterSection";
@@ -31,7 +33,7 @@ export default function Component() {
       <Epkcalendar />
       <TopSongsSection />
       <BioSection />
-      <VenuesSection />
+      <Epkeventlist />
       <ContactMerchSection />
       <FooterSection />
     </div>
