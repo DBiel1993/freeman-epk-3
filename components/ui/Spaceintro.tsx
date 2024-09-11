@@ -135,7 +135,7 @@ export default function SpaceIntro() {
   return (
     <div
       className="relative bg-black overflow-hidden"
-      style={{ height: "400px", perspective: "300px" }} // Container with fixed height and 3D perspective.
+      style={{ height: "600px", perspective: "300px" }} // Container with fixed height and 3D perspective.
     >
       {/* Star Field */}
       <div className="absolute inset-0 pointer-events-none">
