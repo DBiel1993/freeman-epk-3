@@ -8,9 +8,11 @@ const HeaderSection = () => {
     <header className="bg-black py-4 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center px-4">
         {/* Logo or Title */}
-        <div>
-          <h1 className="text-2xl text-white font-bold">Pharaoh The Kid</h1>
-        </div>
+        <Link href="/">
+          <h1 className="text-2xl text-white font-bold cursor-pointer">
+            Pharaoh The Kid
+          </h1>
+        </Link>
         {/* Navigation */}
         <nav className="flex space-x-4">
           <Link href="/">
