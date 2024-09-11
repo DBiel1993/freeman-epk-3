@@ -22,7 +22,7 @@ const HeroSection = () => {
           <div className="flex flex-col items-center justify-center gap-4">
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-gray-200"
+              className="bg-orange-500 text-white hover:bg-gray-200"
               onClick={() =>
                 (window.location.href =
                   "https://www.eventbrite.com/e/309fest-2024-tickets-997669856397?aff=pharoahthekid")
