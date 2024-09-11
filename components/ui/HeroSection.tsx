@@ -40,7 +40,7 @@ const HeroSection = () => {
                 maxWidth: "660px",
                 overflow: "hidden",
                 borderRadius: "10px",
-                marginTop: "300px",
+                marginTop: "200px",
               }}
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
               src="https://embed.music.apple.com/us/album/welcome-to-the-party/1763052506?i=1763052507"
