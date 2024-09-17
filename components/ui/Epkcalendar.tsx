@@ -4,13 +4,6 @@ import { CalendarIcon, MapPinIcon, ClockIcon } from "lucide-react";
 // Sample data for the events
 const events = [
   {
-    date: "2024-09-15",
-    venue: "Lucky's BBQ",
-    location: "Oquawka, IL",
-    time: "11:00 PM",
-    image: "/event-luckys.JPG",
-  },
-  {
     date: "2024-10-26",
     venue: "308 Fest 2024",
     location: "The Patio Bar & Grill, IL",
@@ -23,6 +16,13 @@ const events = [
     location: "The Patio Bar & Grill, IL",
     time: "2:00 PM",
     image: "/309Fest.jpg",
+  },
+  {
+    date: "2024-09-15",
+    venue: "Lucky's BBQ",
+    location: "Oquawka, IL",
+    time: "11:00 PM",
+    image: "/event-luckys.JPG",
   },
   // Add more events as needed
 ];
