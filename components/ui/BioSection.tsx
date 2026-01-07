@@ -1,39 +1,28 @@
-// app/components/ui/BioSection.tsx
-
+import Image from "next/image";
 import React from "react";
+import { bio } from "@/lib/epk-data";
 
 const BioSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-black to-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <img
-            className="w-[450px] h-[450px] object-cover opacity-100"
-            src="/bio-1.png"
+    <section className="py-20">
+      <div className="container mx-auto grid items-center gap-12 px-4 md:grid-cols-[1.1fr_1.4fr]">
+        <div className="relative h-[420px] w-full overflow-hidden rounded-3xl border border-muted shadow-glow md:h-[480px]">
+          <Image
+            src={bio.image}
             alt="Bio Image"
+            fill
+            className="object-cover"
           />
-          <div className="md:w-2/3">
-            <h2 className="text-4xl font-bold mb-4 text-white">
-              About Pharaoh The Kid
-            </h2>
-            <p className="text-lg mb-4 text-white">
-              From Oquawka/Galesburg, IL, Pharaoh The Kid began his musical
-              journey at just 5 years old. Drawing inspiration from legends like
-              Eminem, 50 Cent, and Ludacris, he quickly developed his unique
-              style characterized by raw lyricism and versatile flow changes.
-            </p>
-            <p className="text-lg mb-4 text-white">
-              His debut album, "Take a Trip Inside My Mind," spread rapidly
-              through social media, earning him a loyal following. Pharaoh's
-              music resonates with fans for its authenticity, emotional depth,
-              and perfect blend of poetic and gritty elements.
-            </p>
-            <p className="text-lg text-white">
-              As he continues to rise, Pharaoh remains committed to his craft,
-              constantly exploring new styles and setting himself apart with
-              creativity and dedication. He's proving that great talent can
-              emerge from even the most unexpected places.
-            </p>
+        </div>
+        <div>
+          <p className="text-xs uppercase tracking-[0.35em] text-muted">
+            Biography
+          </p>
+          <h2 className="mt-3 text-4xl font-bold">{bio.title}</h2>
+          <div className="mt-6 space-y-4 text-lg text-muted">
+            {bio.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </div>
       </div>

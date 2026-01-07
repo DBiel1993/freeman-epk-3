@@ -1,87 +1,94 @@
+import Image from "next/image";
 import React from "react";
-import { Button } from "@/components/ui/button"; // Update this import path as needed
+import { Button } from "@/components/ui/button";
 import { FaInstagram, FaFacebook, FaSpotify, FaApple } from "react-icons/fa";
+import type { IconType } from "react-icons";
+import { hero, socialLinks } from "@/lib/epk-data";
+
+const socialIcons: Record<string, IconType> = {
+  Instagram: FaInstagram,
+  Facebook: FaFacebook,
+  Spotify: FaSpotify,
+  "Apple Music": FaApple,
+};
 
 const HeroSection = () => {
   return (
-    <>
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <img
-          className="absolute w-full h-full object-cover opacity-90"
-          src="/hero-2.png"
-          alt="Hero Image"
-        />
-        <div className="relative z-10 text-center">
-          <h1 className="text-6xl md:text-8xl font-extrabold mb-4 text-white">
-            PHARAOH THE KID
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white">
-            Raw Lyricism | Unique Flow | Genre Versatility
-          </p>
-          {/* Flex Column for Button, Social Icons, and Music Embed */}
-          <div className="flex flex-col items-center justify-center gap-4">
-            <Button
-              size="lg"
-              className="bg-orange-500 text-white hover:bg-gray-200"
-              onClick={() =>
-                (window.location.href =
-                  "https://www.eventbrite.com/e/309fest-2024-tickets-997669856397?aff=pharoahthekid")
-              }
-            >
-              Tickets
-            </Button>
-
-            {/* Social Media Icons */}
-            <div className="flex space-x-4 text-white mt-4">
-              <a
-                href="https://www.instagram.com/pharaohthekid99/"
-                target="_blank"
-                rel="noopener noreferrer"
+    <section className="relative min-h-[90vh] overflow-hidden grain">
+      <Image
+        src={hero.image}
+        alt="Hero Image"
+        fill
+        priority
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="relative z-10 flex h-full items-center">
+        <div className="container mx-auto px-4 py-24">
+          <div className="max-w-3xl">
+            <p className="mb-4 text-sm uppercase tracking-[0.4em] text-muted">
+              Live EPK
+            </p>
+            <h1 className="text-5xl font-bold leading-none md:text-7xl">
+              {hero.artistName}
+            </h1>
+            <p className="mt-4 text-lg text-muted md:text-xl">
+              {hero.tagline}
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Button
+                asChild
+                size="lg"
+                className="bg-[#ff6c00] text-black hover:bg-[#ff6c00]/90"
               >
-                <FaInstagram className="w-6 h-6 hover:text-gray-400" />
-              </a>
-              <a
-                href="https://www.facebook.com/p/Pharaoh-The-Kid-100027352491875/?paipv=0&eav=AfaK_c1Qv8b1ZvMARUFd9AAhlhTa_MEuGJxbQjX23CV6L40LOHEwuJwsx5XV2zrTGnU&_rdr"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebook className="w-6 h-6 hover:text-gray-400" />
-              </a>
-              <a
-                href="https://open.spotify.com/artist/37M8wx1NvoiQujq2cN0hhT"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaSpotify className="w-6 h-6 hover:text-gray-400" />
-              </a>
-              <a
-                href="https://music.apple.com/us/artist/pharaoh-the-kid/1524193407"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaApple className="w-6 h-6 hover:text-gray-400" />
-              </a>
+                <a href={hero.ticketUrl} target="_blank" rel="noreferrer">
+                  Tickets
+                </a>
+              </Button>
+              <div className="flex flex-wrap items-center gap-3 text-white">
+                {socialLinks.map((link) => {
+                  const Icon = socialIcons[link.label];
+                  if (!Icon) {
+                    return null;
+                  }
+                  return (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={link.label}
+                      className="rounded-full border border-white/30 p-2 transition hover:border-white"
+                    >
+                      <Icon className="h-5 w-5" />
+                    </a>
+                  );
+                })}
+              </div>
             </div>
-
+          </div>
+          <div className="mt-16 max-w-2xl rounded-2xl border border-muted bg-black/60 p-4 shadow-glow">
+            <p className="text-xs uppercase tracking-[0.3em] text-muted">
+              Featured Release
+            </p>
             <iframe
               allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
               frameBorder="0"
               height="175"
               style={{
-                width: "80%",
-                maxWidth: "660px",
+                width: "100%",
                 overflow: "hidden",
-                borderRadius: "10px",
-                marginTop: "200px",
+                borderRadius: "12px",
+                marginTop: "12px",
               }}
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
               src="https://embed.music.apple.com/us/album/welcome-to-the-party/1763052506?i=1763052507"
-            ></iframe>
+              title="Featured track"
+            />
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

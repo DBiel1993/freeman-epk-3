@@ -4,7 +4,7 @@ import ContactSection from "@/components/ui/ContactSection";
 
 const ContactMerchSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-black to-gray-900">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Merch Section */}

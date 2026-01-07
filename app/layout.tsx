@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Oswald, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-// Define the Roboto font
-const roboto = Roboto({
+const oswald = Oswald({
   subsets: ["latin"],
-  weight: ["400", "700"], // Specify the font weights you need
+  variable: "--font-display",
+  weight: ["500", "700"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-body",
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -20,8 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* Apply the roboto font to the entire body */}
-      <body className={roboto.className}>{children}</body>
+      <body className={`${oswald.variable} ${spaceGrotesk.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

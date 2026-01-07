@@ -3,35 +3,32 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
-
-const venues = [
-  "Cheers On Main - Aledo, IL",
-  "The Patio Bar & Grill - Galesburg, IL",
-  "Luckys BarBQ - Oquawka, IL",
-  "Opies Bar & Grill - Galesburg, IL",
-  "Smokin Willies BBQ - Galesburg, IL",
-];
+import { venues } from "@/lib/epk-data";
 
 const VenuesSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-900 to-black relative">
-      <div className="container mx-auto">
-        <img
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-          src="/album-1.png"
-          alt="Hero Image"
-        />
-        <h2 className="text-4xl font-bold mb-8 text-center text-white relative z-10">
-          Where I've Rocked The Stage
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+    <section className="py-20">
+      <div className="container mx-auto px-4">
+        <div className="mb-10 flex flex-col items-start gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-muted">
+              Venues
+            </p>
+            <h2 className="text-4xl font-bold">Where I've Rocked The Stage</h2>
+          </div>
+          <p className="max-w-xl text-sm text-muted">
+            Club rooms, bar stages, and festival grounds that shaped the live
+            set.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {venues.map((venue) => (
             <Card
               key={venue}
-              className="bg-gray-800 hover:bg-gray-700 transition-colors"
+              className="transition hover:border-white/40"
             >
-              <CardContent className="p-4 flex items-center">
-                <MapPin className="mr-3 flex-shrink-0 text-white" />
+              <CardContent className="flex items-center gap-3 p-5">
+                <MapPin className="h-5 w-5 text-accent" />
                 <p className="text-white">{venue}</p>
               </CardContent>
             </Card>

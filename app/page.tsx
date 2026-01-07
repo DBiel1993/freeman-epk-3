@@ -1,41 +1,36 @@
-"use client";
-
-import SpaceIntro from "@/components/ui/Spaceintro";
+import BioSection from "@/components/ui/BioSection";
 import Epkeventlist from "@/components/ui/Epkeventlist";
 import Epkcalendar from "@/components/ui/Epkcalendar";
-import HeaderSection from "@/components/ui/HeaderSection";
 import FooterSection from "@/components/ui/FooterSection";
-import ContactMerchSection from "@/components/ui/ContactMerchSection";
-import VenuesSection from "@/components/ui/VenuesSection";
-import BioSection from "@/components/ui/BioSection";
-import TopSongsSection from "@/components/ui/TopSongsSection";
+import HeaderSection from "@/components/ui/HeaderSection";
 import HeroSection from "@/components/ui/HeroSection";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import {
-  PlayCircle,
-  Pause,
-  Volume2,
-  MapPin,
-  Mail,
-  Phone,
-  ShoppingBag,
-} from "lucide-react";
+import MerchSection from "@/components/ui/MerchSection";
+import TopSongsSection from "@/components/ui/TopSongsSection";
+import VenuesSection from "@/components/ui/VenuesSection";
+import ContactSection from "@/components/ui/ContactSection";
 
-export default function Component() {
-  const [isPlaying, setIsPlaying] = useState(false);
-
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-black text-white">
       <HeaderSection />
-      <HeroSection />
-      <Epkcalendar />
-      <TopSongsSection />
-      <BioSection />
-      <SpaceIntro />
-      <ContactMerchSection />
+      <main>
+        <HeroSection />
+        <TopSongsSection />
+        <Epkcalendar />
+        <BioSection />
+        <VenuesSection />
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <MerchSection />
+          </div>
+        </section>
+        <Epkeventlist />
+        <section className="pb-20">
+          <div className="container mx-auto px-4">
+            <ContactSection />
+          </div>
+        </section>
+      </main>
       <FooterSection />
     </div>
   );
